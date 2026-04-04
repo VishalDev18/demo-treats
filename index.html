@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Treats24 – Dil Se Delivery</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.14.0/dist/tabler-icons.min.css"/>
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="t24-nav" id="mainNav">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon"><i class="ti ti-motorbike"></i></span>
+        <span class="logo-text">Treats<em>24</em></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#categories"><i class="ti ti-category"></i> Categories</a></li>
+        <li><a href="#restaurants"><i class="ti ti-building-store"></i> Restaurants</a></li>
+        <li><a href="#cities"><i class="ti ti-map-pin"></i> Cities</a></li>
+        <li><a href="partner.html"><i class="ti ti-users"></i> Partner With Us</a></li>
+        <li><a href="#order" class="nav-cta"><i class="ti ti-shopping-bag"></i> Order Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== HERO BANNER ========== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-grain"></div>
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-orb orb-3"></div>
+    </div>
+
+    <div class="hero-container">
+      <div class="hero-left">
+        <div class="hero-pill">
+          <i class="ti ti-map-pin"></i>
+          <span>Now live in <strong>Kolkata</strong> — More cities coming soon!</span>
+        </div>
+        <h1 class="hero-title">
+          Your Favourite Food,<br/>
+          <em>Delivered with Love</em> 💛
+        </h1>
+        <p class="hero-desc">
+          Discover the best restaurants around you and enjoy seamless delivery anytime.
+        </p>
+
+        <div class="hero-search">
+          <div class="search-icon"><i class="ti ti-map-pin"></i></div>
+          <input type="text" placeholder="Enter your delivery location…" id="locationInput"/>
+          <div class="search-divider"></div>
+          <div class="search-icon"><i class="ti ti-search"></i></div>
+          <input type="text" placeholder="Search for food or restaurants…" id="searchInput"/>
+          <button class="search-btn" onclick="handleHeroSearch()">Find Food</button>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">500<span>+</span></div>
+            <div class="stat-label">Restaurants</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <div class="stat-num">50K<span>+</span></div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <div class="stat-num">30<span>min</span></div>
+            <div class="stat-label">Avg Delivery</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <div class="stat-num">4.8<span>★</span></div>
+            <div class="stat-label">App Rating</div>
+          </div>
+        </div>
+
+        <!-- App Download CTA -->
+        <div class="hero-app-row">
+          <span class="hero-app-label">Download the app</span>
+          <a href="#app" class="hero-app-btn">
+            <i class="ti ti-brand-google-play"></i> Google Play
+          </a>
+          <a href="#app" class="hero-app-btn">
+            <i class="ti ti-brand-apple"></i> App Store
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-visual">
+          <div class="hero-img-main float-1">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&auto=format&fit=crop" alt="Delicious Food"/>
+            <div class="hero-img-overlay"></div>
+          </div>
+          <div class="hero-float-card fc-1 float-2">
+            <div class="fc-icon"><i class="ti ti-clock"></i></div>
+            <div>
+              <strong>30 min</strong>
+              <span>Fast Delivery</span>
+            </div>
+          </div>
+          <div class="hero-float-card fc-2 float-3">
+            <div class="fc-icon fc-green"><i class="ti ti-star-filled"></i></div>
+            <div>
+              <strong>4.8 ★</strong>
+              <span>Top Rated</span>
+            </div>
+          </div>
+          <div class="hero-float-card fc-3 float-4">
+            <div class="fc-icon fc-orange"><i class="ti ti-truck-delivery"></i></div>
+            <div>
+              <strong>Free Delivery</strong>
+              <span>First Order</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wave divider -->
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#fff"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ========== HEADING + SUBHEADING + FOOD SHOWCASE ========== -->
+  <section class="discover section-pad" id="discover">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-eyebrow"><i class="ti ti-sparkles"></i> Kolkata's Best</div>
+        <h2>Discover Delicious Food<br/><span>Near You</span></h2>
+        <p>Order from your favourite restaurants with lightning-fast delivery</p>
+      </div>
+
+      <div class="food-showcase">
+        <div class="food-item reveal" style="--delay:0s">
+          <div class="food-img-wrap">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300&auto=format&fit=crop" alt="Pizza"/>
+            <div class="food-overlay"><span>Order Now</span></div>
+          </div>
+          <span class="food-name">Pizza</span>
+        </div>
+        <div class="food-item reveal" style="--delay:0.08s">
+          <div class="food-img-wrap">
+            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=300&auto=format&fit=crop" alt="Biryani"/>
+            <div class="food-overlay"><span>Order Now</span></div>
+          </div>
+          <span class="food-name">Biryani</span>
+        </div>
+        <div class="food-item reveal" style="--delay:0.16s">
+          <div class="food-img-wrap">
+            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=300&auto=format&fit=crop" alt="Burgers"/>
+            <div class="food-overlay"><span>Order Now</span></div>
+          </div>
+          <span class="food-name">Burgers</span>
+        </div>
+        <div class="food-item reveal" style="--delay:0.24s">
+          <div class="food-img-wrap">
+            <img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=300&auto=format&fit=crop" alt="Desserts"/>
+            <div class="food-overlay"><span>Order Now</span></div>
+          </div>
+          <span class="food-name">Desserts</span>
+        </div>
+        <div class="food-item reveal" style="--delay:0.32s">
+          <div class="food-img-wrap">
+            <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=300&auto=format&fit=crop" alt="Thali"/>
+            <div class="food-overlay"><span>Order Now</span></div>
+          </div>
+          <span class="food-name">Thali</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CITIES & AVAILABILITY ========== -->
+  <section class="cities section-pad-sm" id="cities">
+    <div class="container">
+      <div class="cities-banner reveal">
+        <div class="cities-left">
+          <div class="cities-eyebrow"><i class="ti ti-map-pin-filled"></i> Currently Available In</div>
+          <div class="cities-list">
+            <a href="#" class="city-chip active">
+              <i class="ti ti-building-skyscraper"></i> Kolkata
+            </a>
+            <div class="city-chip coming">
+              <i class="ti ti-clock"></i> Mumbai <span class="coming-tag">Soon</span>
+            </div>
+            <div class="city-chip coming">
+              <i class="ti ti-clock"></i> Delhi <span class="coming-tag">Soon</span>
+            </div>
+            <div class="city-chip coming">
+              <i class="ti ti-clock"></i> Bengaluru <span class="coming-tag">Soon</span>
+            </div>
+            <div class="city-chip coming">
+              <i class="ti ti-clock"></i> Chennai <span class="coming-tag">Soon</span>
+            </div>
+          </div>
+        </div>
+        <div class="cities-right">
+          <div class="cities-stats">
+            <span><i class="ti ti-building-store"></i> <strong>500+</strong> Restaurants</span>
+            <span class="dot">•</span>
+            <span><i class="ti ti-bolt"></i> <strong>Fast Delivery</strong> Guaranteed</span>
+            <span class="dot">•</span>
+            <span><i class="ti ti-shield-check"></i> <strong>Safe</strong> & Hygienic</span>
+          </div>
+          <a href="#" class="suggest-city-btn">
+            <i class="ti ti-plus"></i> Suggest Your City
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CATEGORIES ========== -->
+  <section class="categories section-pad" id="categories">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-eyebrow"><i class="ti ti-heart"></i> Browse by cuisine</div>
+        <h2>What's your<br/><span>craving today?</span></h2>
+      </div>
+
+      <div class="categories-grid">
+        <div class="cat-card reveal">
+          <div class="cat-icon-wrap">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200&auto=format&fit=crop" alt="Pizza"/>
+          </div>
+          <span>Pizza</span>
+        </div>
+        <div class="cat-card reveal" style="--delay:0.05s">
+          <div class="cat-icon-wrap">
+            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&auto=format&fit=crop" alt="Biryani"/>
+          </div>
+          <span>Biryani</span>
+        </div>
+        <div class="cat-card reveal" style="--delay:0.1s">
+          <div class="cat-icon-wrap">
+            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=200&auto=format&fit=crop" alt="Burgers"/>
+          </div>
+          <span>Burgers</span>
+        </div>
+        <div class="cat-card reveal" style="--delay:0.15s">
+          <div class="cat-icon-wrap">
+            <img src="https://images.unsplash.com/photo-1534482421-64566f976cfa?w=200&auto=format&fit=crop" alt="Momos"/>
+          </div>
+          <span>Momos</span>
+        </div>
+        <div class="cat-card reveal" style="--delay:0.2s">
+          <div class="cat-icon-wrap">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=200&auto=format&fit=crop" alt="Desserts"/>
+          </div>
+          <span>Desserts</span>
+        </div>
+        <div class="cat-card reveal" style="--delay:0.25s">
+          <div class="cat-icon-wrap">
+            <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=200&auto=format&fit=crop" alt="Wraps"/>
+          </div>
+          <span>Wraps</span>
+        </div>
+        <div class="cat-card reveal" style="--delay:0.3s">
+          <div class="cat-icon-wrap">
+            <img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=200&auto=format&fit=crop" alt="Sushi"/>
+          </div>
+          <span>Sushi</span>
+        </div>
+        <div class="cat-card reveal" style="--delay:0.35s">
+          <div class="cat-icon-wrap">
+            <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=200&auto=format&fit=crop" alt="Thali"/>
+          </div>
+          <span>Thali</span>
+        </div>
+        <div class="cat-card reveal" style="--delay:0.4s">
+          <div class="cat-icon-wrap">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=200&auto=format&fit=crop" alt="Chinese"/>
+          </div>
+          <span>Chinese</span>
+        </div>
+        <div class="cat-card reveal" style="--delay:0.45s">
+          <div class="cat-icon-wrap">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=200&auto=format&fit=crop" alt="South Indian"/>
+          </div>
+          <span>South Indian</span>
+        </div>
+        <div class="cat-card reveal" style="--delay:0.5s">
+          <div class="cat-icon-wrap">
+            <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=200&auto=format&fit=crop" alt="Rolls"/>
+          </div>
+          <span>Rolls</span>
+        </div>
+        <div class="cat-card reveal" style="--delay:0.55s">
+          <div class="cat-icon-wrap">
+            <img src="https://images.unsplash.com/photo-1506459225024-1428097a7e18?w=200&auto=format&fit=crop" alt="Beverages"/>
+          </div>
+          <span>Beverages</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED RESTAURANTS ========== -->
+  <section class="restaurants section-pad" id="restaurants">
+    <div class="container">
+
+      <!-- Top Rated -->
+      <div class="rest-section-header reveal">
+        <div>
+          <div class="section-eyebrow"><i class="ti ti-star"></i> Handpicked for you</div>
+          <h2>Featured <span>Restaurants</span></h2>
+        </div>
+        <a href="#" class="see-all">View All <i class="ti ti-arrow-right"></i></a>
+      </div>
+
+      <!-- Tabs -->
+      <div class="rest-tabs">
+        <button class="rest-tab active" data-tab="top">
+          <i class="ti ti-star-filled"></i> Top Rated
+        </button>
+        <button class="rest-tab" data-tab="trending">
+          <i class="ti ti-flame"></i> Trending
+        </button>
+        <button class="rest-tab" data-tab="new">
+          <i class="ti ti-sparkles"></i> Newly Added
+        </button>
+      </div>
+
+      <div class="restaurants-grid" id="restaurantsGrid">
+        <!-- Top Rated tab (default) -->
+        <div class="rest-card reveal" data-tab-content="top">
+          <div class="rest-img-wrap">
+            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&auto=format&fit=crop" alt="The Biryani Co."/>
+            <div class="rest-badge"><i class="ti ti-star-filled"></i> Top Rated</div>
+            <button class="rest-fav"><i class="ti ti-heart"></i></button>
+          </div>
+          <div class="rest-body">
+            <div class="rest-header">
+              <h4>The Biryani Co.</h4>
+              <div class="rest-rating"><i class="ti ti-star-filled"></i> 4.8</div>
+            </div>
+            <div class="rest-meta">
+              <span><i class="ti ti-clock"></i> 25–35 min</span>
+              <span><i class="ti ti-users"></i> ₹300 for two</span>
+            </div>
+            <div class="rest-tags">
+              <span>Biryani</span><span>North Indian</span><span>Mughlai</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rest-card reveal" style="--delay:0.1s" data-tab-content="top">
+          <div class="rest-img-wrap">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&auto=format&fit=crop" alt="Rollover"/>
+            <div class="rest-badge rest-badge-veg"><i class="ti ti-leaf"></i> Pure Veg</div>
+            <button class="rest-fav"><i class="ti ti-heart"></i></button>
+          </div>
+          <div class="rest-body">
+            <div class="rest-header">
+              <h4>Rollover</h4>
+              <div class="rest-rating"><i class="ti ti-star-filled"></i> 4.7</div>
+            </div>
+            <div class="rest-meta">
+              <span><i class="ti ti-clock"></i> 20–30 min</span>
+              <span><i class="ti ti-users"></i> ₹200 for two</span>
+            </div>
+            <div class="rest-tags">
+              <span>Rolls</span><span>Wraps</span><span>Snacks</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rest-card reveal" style="--delay:0.2s" data-tab-content="top">
+          <div class="rest-img-wrap">
+            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600&auto=format&fit=crop" alt="Burger Mania"/>
+            <div class="rest-badge rest-badge-fast"><i class="ti ti-bolt"></i> Fast</div>
+            <button class="rest-fav"><i class="ti ti-heart"></i></button>
+          </div>
+          <div class="rest-body">
+            <div class="rest-header">
+              <h4>Burger Mania</h4>
+              <div class="rest-rating"><i class="ti ti-star-filled"></i> 4.6</div>
+            </div>
+            <div class="rest-meta">
+              <span><i class="ti ti-clock"></i> 15–25 min</span>
+              <span><i class="ti ti-users"></i> ₹250 for two</span>
+            </div>
+            <div class="rest-tags">
+              <span>Burgers</span><span>Fast Food</span><span>Shakes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rest-card reveal" style="--delay:0.3s" data-tab-content="top">
+          <div class="rest-img-wrap">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&auto=format&fit=crop" alt="Dragon Palace"/>
+            <div class="rest-badge"><i class="ti ti-star-filled"></i> Top Rated</div>
+            <button class="rest-fav"><i class="ti ti-heart"></i></button>
+          </div>
+          <div class="rest-body">
+            <div class="rest-header">
+              <h4>Dragon Palace</h4>
+              <div class="rest-rating"><i class="ti ti-star-filled"></i> 4.5</div>
+            </div>
+            <div class="rest-meta">
+              <span><i class="ti ti-clock"></i> 25–35 min</span>
+              <span><i class="ti ti-users"></i> ₹350 for two</span>
+            </div>
+            <div class="rest-tags">
+              <span>Chinese</span><span>Momos</span><span>Noodles</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trending tab -->
+        <div class="rest-card reveal hidden" data-tab-content="trending">
+          <div class="rest-img-wrap">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&auto=format&fit=crop" alt="Pizza Studio"/>
+            <div class="rest-badge rest-badge-new"><i class="ti ti-flame"></i> Trending</div>
+            <button class="rest-fav"><i class="ti ti-heart"></i></button>
+          </div>
+          <div class="rest-body">
+            <div class="rest-header"><h4>Pizza Studio</h4><div class="rest-rating"><i class="ti ti-star-filled"></i> 4.4</div></div>
+            <div class="rest-meta"><span><i class="ti ti-clock"></i> 25–35 min</span><span><i class="ti ti-users"></i> ₹400 for two</span></div>
+            <div class="rest-tags"><span>Pizza</span><span>Italian</span></div>
+          </div>
+        </div>
+        <div class="rest-card reveal hidden" style="--delay:0.1s" data-tab-content="trending">
+          <div class="rest-img-wrap">
+            <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&auto=format&fit=crop" alt="Rolls World"/>
+            <div class="rest-badge rest-badge-new"><i class="ti ti-flame"></i> Trending</div>
+            <button class="rest-fav"><i class="ti ti-heart"></i></button>
+          </div>
+          <div class="rest-body">
+            <div class="rest-header"><h4>Rolls World</h4><div class="rest-rating"><i class="ti ti-star-filled"></i> 4.6</div></div>
+            <div class="rest-meta"><span><i class="ti ti-clock"></i> 15–20 min</span><span><i class="ti ti-users"></i> ₹150 for two</span></div>
+            <div class="rest-tags"><span>Rolls</span><span>Snacks</span></div>
+          </div>
+        </div>
+        <div class="rest-card reveal hidden" style="--delay:0.2s" data-tab-content="trending">
+          <div class="rest-img-wrap">
+            <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=600&auto=format&fit=crop" alt="Thali House"/>
+            <div class="rest-badge rest-badge-new"><i class="ti ti-flame"></i> Trending</div>
+            <button class="rest-fav"><i class="ti ti-heart"></i></button>
+          </div>
+          <div class="rest-body">
+            <div class="rest-header"><h4>Thali House</h4><div class="rest-rating"><i class="ti ti-star-filled"></i> 4.3</div></div>
+            <div class="rest-meta"><span><i class="ti ti-clock"></i> 30–40 min</span><span><i class="ti ti-users"></i> ₹280 for two</span></div>
+            <div class="rest-tags"><span>Thali</span><span>North Indian</span></div>
+          </div>
+        </div>
+        <div class="rest-card reveal hidden" style="--delay:0.3s" data-tab-content="trending">
+          <div class="rest-img-wrap">
+            <img src="https://images.unsplash.com/photo-1534482421-64566f976cfa?w=600&auto=format&fit=crop" alt="Momo Station"/>
+            <div class="rest-badge rest-badge-new"><i class="ti ti-flame"></i> Trending</div>
+            <button class="rest-fav"><i class="ti ti-heart"></i></button>
+          </div>
+          <div class="rest-body">
+            <div class="rest-header"><h4>Momo Station</h4><div class="rest-rating"><i class="ti ti-star-filled"></i> 4.7</div></div>
+            <div class="rest-meta"><span><i class="ti ti-clock"></i> 15–20 min</span><span><i class="ti ti-users"></i> ₹180 for two</span></div>
+            <div class="rest-tags"><span>Momos</span><span>Chinese</span></div>
+          </div>
+        </div>
+
+        <!-- New tab -->
+        <div class="rest-card reveal hidden" data-tab-content="new">
+          <div class="rest-img-wrap">
+            <img src="https://images.unsplash.com/photo-1506459225024-1428097a7e18?w=600&auto=format&fit=crop" alt="Brew & Bite"/>
+            <div class="rest-badge rest-badge-new"><i class="ti ti-sparkles"></i> New</div>
+            <button class="rest-fav"><i class="ti ti-heart"></i></button>
+          </div>
+          <div class="rest-body">
+            <div class="rest-header"><h4>Brew & Bite</h4><div class="rest-rating"><i class="ti ti-star-filled"></i> 4.2</div></div>
+            <div class="rest-meta"><span><i class="ti ti-clock"></i> 20–30 min</span><span><i class="ti ti-users"></i> ₹300 for two</span></div>
+            <div class="rest-tags"><span>Cafe</span><span>Beverages</span><span>Snacks</span></div>
+          </div>
+        </div>
+        <div class="rest-card reveal hidden" style="--delay:0.1s" data-tab-content="new">
+          <div class="rest-img-wrap">
+            <img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600&auto=format&fit=crop" alt="Sweet Dreams"/>
+            <div class="rest-badge rest-badge-new"><i class="ti ti-sparkles"></i> New</div>
+            <button class="rest-fav"><i class="ti ti-heart"></i></button>
+          </div>
+          <div class="rest-body">
+            <div class="rest-header"><h4>Sweet Dreams</h4><div class="rest-rating"><i class="ti ti-star-filled"></i> 4.5</div></div>
+            <div class="rest-meta"><span><i class="ti ti-clock"></i> 20–25 min</span><span><i class="ti ti-users"></i> ₹200 for two</span></div>
+            <div class="rest-tags"><span>Desserts</span><span>Ice Cream</span></div>
+          </div>
+        </div>
+        <div class="rest-card reveal hidden" style="--delay:0.2s" data-tab-content="new">
+          <div class="rest-img-wrap">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&auto=format&fit=crop" alt="Dosa Corner"/>
+            <div class="rest-badge rest-badge-new"><i class="ti ti-sparkles"></i> New</div>
+            <button class="rest-fav"><i class="ti ti-heart"></i></button>
+          </div>
+          <div class="rest-body">
+            <div class="rest-header"><h4>Dosa Corner</h4><div class="rest-rating"><i class="ti ti-star-filled"></i> 4.4</div></div>
+            <div class="rest-meta"><span><i class="ti ti-clock"></i> 20–30 min</span><span><i class="ti ti-users"></i> ₹180 for two</span></div>
+            <div class="rest-tags"><span>South Indian</span><span>Breakfast</span></div>
+          </div>
+        </div>
+        <div class="rest-card reveal hidden" style="--delay:0.3s" data-tab-content="new">
+          <div class="rest-img-wrap">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&auto=format&fit=crop" alt="Wok Express"/>
+            <div class="rest-badge rest-badge-new"><i class="ti ti-sparkles"></i> New</div>
+            <button class="rest-fav"><i class="ti ti-heart"></i></button>
+          </div>
+          <div class="rest-body">
+            <div class="rest-header"><h4>Wok Express</h4><div class="rest-rating"><i class="ti ti-star-filled"></i> 4.1</div></div>
+            <div class="rest-meta"><span><i class="ti ti-clock"></i> 25–35 min</span><span><i class="ti ti-users"></i> ₹300 for two</span></div>
+            <div class="rest-tags"><span>Chinese</span><span>Pan Asian</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY TREATS24 ========== -->
+  <section class="why section-pad" id="why">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-eyebrow"><i class="ti ti-heart-filled"></i> Why choose us</div>
+        <h2>The Treats24 <span>Promise</span></h2>
+        <p>We're committed to making every order a great experience</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-icon"><i class="ti ti-bolt"></i></div>
+          <h3>Lightning Fast</h3>
+          <p>Average delivery in under 30 minutes. We track every order in real-time so you always know when your food arrives.</p>
+        </div>
+        <div class="why-card reveal" style="--delay:0.1s">
+          <div class="why-icon why-icon-2"><i class="ti ti-shield-check"></i></div>
+          <h3>Safe & Hygienic</h3>
+          <p>Every restaurant partner is verified for hygiene standards. Your food safety is our top priority.</p>
+        </div>
+        <div class="why-card reveal" style="--delay:0.2s">
+          <div class="why-icon why-icon-3"><i class="ti ti-star-filled"></i></div>
+          <h3>Quality Assured</h3>
+          <p>Only the highest-rated restaurants make it onto Treats24. Real reviews, real customers, real quality.</p>
+        </div>
+        <div class="why-card reveal" style="--delay:0.3s">
+          <div class="why-icon why-icon-4"><i class="ti ti-headset"></i></div>
+          <h3>24/7 Support</h3>
+          <p>Our support team is always available. Chat with us on WhatsApp or email — we're here anytime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ENQUIRY / FEEDBACK FORM ========== -->
+  <section class="enquiry section-pad" id="contact">
+    <div class="container">
+      <div class="enquiry-wrap">
+        <div class="enquiry-left reveal">
+          <div class="section-eyebrow"><i class="ti ti-message-circle"></i> Get in Touch</div>
+          <h2>We'd love to<br/><span>hear from you</span></h2>
+          <p>Have a question, feedback, or want to partner with us? Fill in the form and our team will get back to you within 24 hours.</p>
+          <div class="enquiry-contact-list">
+            <div class="ec-item">
+              <i class="ti ti-mail"></i>
+              <a href="mailto:support@treats24.com">support@treats24.com</a>
+            </div>
+            <div class="ec-item">
+              <i class="ti ti-brand-whatsapp"></i>
+              <a href="https://wa.me/919876543210" target="_blank">Chat on WhatsApp</a>
+            </div>
+            <div class="ec-item">
+              <i class="ti ti-map-pin"></i>
+              <span>Kolkata, West Bengal, India</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="enquiry-right reveal" style="--delay:0.15s">
+          <div id="enquiryForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label><i class="ti ti-user"></i> Your Name</label>
+                <input type="text" id="eq_name" placeholder="Full name"/>
+              </div>
+              <div class="form-group">
+                <label><i class="ti ti-phone"></i> Phone Number</label>
+                <input type="tel" id="eq_phone" placeholder="+91 98765 43210"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label><i class="ti ti-mail"></i> Email Address</label>
+              <input type="email" id="eq_email" placeholder="you@example.com"/>
+            </div>
+            <div class="form-group">
+              <label><i class="ti ti-message"></i> Message</label>
+              <textarea id="eq_message" rows="4" placeholder="Tell us about your enquiry…"></textarea>
+            </div>
+            <button class="btn-submit" onclick="submitEnquiry()">
+              <i class="ti ti-send"></i> Send Message
+            </button>
+          </div>
+          <div id="enquirySuccess" class="enquiry-success hidden">
+            <div class="success-icon"><i class="ti ti-circle-check"></i></div>
+            <h3>Message Sent!</h3>
+            <p>We'll get back to you within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== APP DOWNLOAD ========== -->
+  <section class="app-section section-pad" id="app">
+    <div class="app-bg">
+      <div class="app-orb app-orb-1"></div>
+      <div class="app-orb app-orb-2"></div>
+    </div>
+    <div class="container">
+      <div class="app-grid">
+        <div class="app-visual reveal">
+          <div class="phone-mockup float-anim">
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&auto=format&fit=crop" alt="Treats24 App"/>
+            <div class="phone-screen-overlay"></div>
+          </div>
+          <div class="app-glow"></div>
+        </div>
+
+        <div class="app-content reveal" style="--delay:0.1s">
+          <div class="section-eyebrow"><i class="ti ti-device-mobile"></i> Mobile App</div>
+          <h2>Get the Treats24 App<br/><span>for Faster Ordering</span></h2>
+          <p>Easy restaurant discovery, quick ordering, live tracking & exclusive app-only offers. Download free and get your first delivery on us.</p>
+
+          <div class="app-features">
+            <div class="app-feature">
+              <i class="ti ti-search"></i>
+              <span>Easy restaurant discovery</span>
+            </div>
+            <div class="app-feature">
+              <i class="ti ti-shopping-cart"></i>
+              <span>Quick & seamless ordering</span>
+            </div>
+            <div class="app-feature">
+              <i class="ti ti-map-pin"></i>
+              <span>Live order tracking (coming soon)</span>
+            </div>
+            <div class="app-feature">
+              <i class="ti ti-tag"></i>
+              <span>Exclusive offers & discounts</span>
+            </div>
+            <div class="app-feature">
+              <i class="ti ti-lock"></i>
+              <span>Secure payments</span>
+            </div>
+          </div>
+
+          <div class="store-btns">
+            <a href="#" class="store-btn">
+              <i class="ti ti-brand-google-play"></i>
+              <div>
+                <small>Get it on</small>
+                <strong>Google Play</strong>
+              </div>
+            </a>
+            <a href="#" class="store-btn">
+              <i class="ti ti-brand-apple"></i>
+              <div>
+                <small>Download on</small>
+                <strong>App Store</strong>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PARTNER CTA ========== -->
+  <section class="partner-cta section-pad" id="partner-cta">
+    <div class="container">
+      <div class="partner-cta-card reveal">
+        <div class="pcta-left">
+          <div class="section-eyebrow light"><i class="ti ti-handshake"></i> Partner with us</div>
+          <h2>Grow your restaurant<br/>with <em>Treats24</em></h2>
+          <p>Join hundreds of restaurants reaching thousands of hungry customers in Kolkata. Zero setup fees, go live in 48 hours.</p>
+          <div class="pcta-perks">
+            <span><i class="ti ti-circle-check"></i> Zero onboarding fees</span>
+            <span><i class="ti ti-circle-check"></i> 3.2× revenue growth</span>
+            <span><i class="ti ti-circle-check"></i> Dedicated support</span>
+            <span><i class="ti ti-circle-check"></i> Live in 48 hours</span>
+          </div>
+          <a href="partner.html" class="pcta-btn">
+            <i class="ti ti-building-store"></i> Register Your Restaurant
+          </a>
+        </div>
+        <div class="pcta-right">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&auto=format&fit=crop" alt="Restaurant Partner"/>
+          <div class="pcta-metric m1">
+            <div class="metric-num">3.2×</div>
+            <div class="metric-label">Avg Revenue Boost</div>
+          </div>
+          <div class="pcta-metric m2">
+            <div class="metric-num">48h</div>
+            <div class="metric-label">Go Live Time</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="faq section-pad" id="faq">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-eyebrow"><i class="ti ti-help-circle"></i> FAQ</div>
+        <h2>Frequently Asked <span>Questions</span></h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item reveal">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>How do I place an order?</span>
+            <i class="ti ti-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            <p>Simply search for restaurants near you, browse their menu, add items to your cart, and proceed to checkout. Choose your payment method and your order will be placed instantly.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="--delay:0.05s">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>How do I become a restaurant partner?</span>
+            <i class="ti ti-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            <p>Visit our <a href="partner.html">Partner With Us</a> page, fill in your restaurant details and submit the required documents. Our team will verify and onboard you within 48 hours.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="--delay:0.1s">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>What are the delivery charges?</span>
+            <i class="ti ti-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            <p>Delivery charges vary based on distance and order value. Your first order is completely free! After that, we offer free delivery on orders above ₹299.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="--delay:0.15s">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>What payment methods are accepted?</span>
+            <i class="ti ti-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            <p>We accept UPI (GPay, PhonePe, Paytm), credit/debit cards, net banking, and cash on delivery. All digital payments are 100% secure.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="--delay:0.2s">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>What is the cancellation policy?</span>
+            <i class="ti ti-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            <p>Orders can be cancelled within 2 minutes of placement for a full refund. After preparation has started, cancellations are subject to review. Contact support for assistance.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="--delay:0.25s">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>How do I track my order?</span>
+            <i class="ti ti-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            <p>Once your order is placed, you'll receive real-time updates via SMS and app notifications. Live GPS tracking will be available soon on the Treats24 app.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-top container">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo footer-logo">
+          <span class="logo-icon"><i class="ti ti-motorbike"></i></span>
+          <span class="logo-text">Treats<em>24</em></span>
+        </a>
+        <p class="footer-tagline">Dil Se Delivery 💛</p>
+        <p>Treats24 is a food delivery platform built with a vision to connect customers with their favourite local restaurants. Fast delivery, quality service, and helping restaurants grow digitally.</p>
+        <div class="social-row">
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter"><i class="ti ti-brand-x"></i></a>
+          <a href="#" class="social-btn" aria-label="YouTube"><i class="ti ti-brand-youtube"></i></a>
+          <a href="https://wa.me/919876543210" class="social-btn whatsapp" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
+        </div>
+        <div class="footer-email">
+          <i class="ti ti-mail"></i>
+          <a href="mailto:support@treats24.com">support@treats24.com</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#about"><i class="ti ti-chevron-right"></i> About Us</a></li>
+          <li><a href="#"><i class="ti ti-chevron-right"></i> Careers</a></li>
+          <li><a href="#"><i class="ti ti-chevron-right"></i> Blog</a></li>
+          <li><a href="#"><i class="ti ti-chevron-right"></i> Press</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Help</h5>
+        <ul>
+          <li><a href="#contact"><i class="ti ti-chevron-right"></i> Contact Us</a></li>
+          <li><a href="#faq"><i class="ti ti-chevron-right"></i> FAQ</a></li>
+          <li><a href="#"><i class="ti ti-chevron-right"></i> Track Order</a></li>
+          <li><a href="#"><i class="ti ti-chevron-right"></i> Refund Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Partner</h5>
+        <ul>
+          <li><a href="partner.html"><i class="ti ti-chevron-right"></i> Partner With Us</a></li>
+          <li><a href="#"><i class="ti ti-chevron-right"></i> Restaurant Login</a></li>
+          <li><a href="#"><i class="ti ti-chevron-right"></i> Delivery Partner</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#"><i class="ti ti-chevron-right"></i> Privacy Policy</a></li>
+          <li><a href="#"><i class="ti ti-chevron-right"></i> Terms & Conditions</a></li>
+          <li><a href="#"><i class="ti ti-chevron-right"></i> Cookie Policy</a></li>
+          <li><a href="#"><i class="ti ti-chevron-right"></i> Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- About us mini -->
+    <div class="footer-about">
+      <div class="container">
+        <div class="footer-about-inner">
+          <h5>About Treats24</h5>
+          <p>Treats24 is a food delivery platform built with a vision to connect customers with their favourite local restaurants. We focus on fast delivery, quality service, and helping restaurants grow their business digitally. Currently operating in Kolkata with plans to expand pan-India.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2025 Treats24 Pvt. Ltd. All rights reserved. Made with <i class="ti ti-heart-filled" style="color:#e91e63;"></i> in Kolkata</p>
+        <div class="footer-badges">
+          <span><i class="ti ti-shield-check"></i> Secure Payments</span>
+          <span><i class="ti ti-certificate"></i> FSSAI Verified</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
