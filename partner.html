@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="style.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.14.0/dist/tabler-icons.min.css"/>
 </head>
-<body>
+<body class="partner-page">
 
   <!-- ========== NAVBAR ========== -->
   <nav class="t24-nav scrolled" id="mainNav">
@@ -19,34 +19,29 @@
         <span class="logo-icon"><i class="ti ti-motorbike"></i></span>
         <span class="logo-text">Treats<em>24</em></span>
       </a>
-      <button class="nav-toggle" id="navToggle">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
-        <ul class="nav-links" id="navLinks">
-        <li><a href="#categories"><i class="ti ti-category"></i> Categories</a></li>
-        <li><a href="#restaurants"><i class="ti ti-building-store"></i> Restaurants</a></li>
-        <li><a href="#cities"><i class="ti ti-map-pin"></i> Cities</a></li>
-        <!-- <li><a href="partner.html"><i class="ti ti-users"></i> Partner With Us</a></li> -->
-        <li><a href="partner.html" class="nav-cta"><i class="ti ti-shopping-bag"></i> Partner With Us</a></li>
+      <ul class="nav-links" id="navLinks">
+        <!-- <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#why">Why Us</a></li>
+        <li><a href="index.html#cities">Cities</a></li>
+        <li><a href="index.html#contact">Contact</a></li> -->
+        <li><a href="partner.html" class="nav-cta"><i class="ti ti-building-store"></i> Partner With Us</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- ========== PARTNER HERO ========== -->
   <section class="partner-hero">
-    <div class="partner-hero-bg">
-      <div class="hero-grain"></div>
-      <div class="hero-orb orb-1"></div>
-      <div class="hero-orb orb-2"></div>
-    </div>
     <div class="container partner-hero-content">
       <div class="partner-hero-left">
         <div class="hero-pill">
-          <i class="ti ti-handshake"></i>
-          <span>Join <strong>500+</strong> restaurant partners</span>
+          <span class="pill-dot"></span>
+          Join <strong>500+</strong> restaurant partners
         </div>
         <h1>Partner with <em>Treats24</em></h1>
-        <p class="partner-hero-sub">Grow your business and reach more customers with us.</p>
+        <p class="partner-hero-sub">Grow your business and reach more customers.</p>
         <p class="partner-hero-desc">Connect with thousands of hungry customers in Kolkata. Zero setup fees, dedicated support, and go live in just 48 hours.</p>
         <div class="partner-hero-metrics">
           <div class="phm">
@@ -84,34 +79,34 @@
       </div>
       <div class="benefits-grid">
         <div class="benefit-card reveal">
-          <div class="benefit-icon"><i class="ti ti-trending-up"></i></div>
-          <h3>Increased Visibility & Orders</h3>
-          <p>Get discovered by thousands of food lovers in your area. Our platform drives more orders to your restaurant every day.</p>
+          <div class="benefit-icon"><i class="ti ti-coin-rupee"></i></div>
+          <h3>Low Commission for Restaurants</h3>
+          <p>Fair, transparent commission plans. Partners keep more of what they earn — helping local businesses genuinely thrive.</p>
         </div>
         <div class="benefit-card reveal" style="--delay:0.1s">
-          <div class="benefit-icon bi-2"><i class="ti ti-user-check"></i></div>
-          <h3>Dedicated Account Manager</h3>
-          <p>Your personal growth partner from Treats24 will help you optimize your menu, manage promotions, and maximize earnings.</p>
+          <div class="benefit-icon bi-2"><i class="ti ti-rocket"></i></div>
+          <h3>Quick Onboarding</h3>
+          <p>Get your restaurant live in 48 hours. Our streamlined process makes joining Treats24 incredibly simple.</p>
         </div>
         <div class="benefit-card reveal" style="--delay:0.2s">
-          <div class="benefit-icon bi-3"><i class="ti ti-speakerphone"></i></div>
-          <h3>Marketing & Promotions</h3>
-          <p>We actively promote your restaurant through our app, social media, and targeted campaigns to bring in more customers.</p>
+          <div class="benefit-icon bi-3"><i class="ti ti-headset"></i></div>
+          <h3>Local Restaurant Support</h3>
+          <p>Dedicated local support team. We understand Kolkata's food culture and are always here to help.</p>
         </div>
         <div class="benefit-card reveal" style="--delay:0.3s">
-          <div class="benefit-icon bi-4"><i class="ti ti-rocket"></i></div>
-          <h3>Easy Onboarding</h3>
-          <p>Simple, hassle-free registration process. Submit your documents, get verified, and start receiving orders within 48 hours.</p>
+          <div class="benefit-icon bi-4"><i class="ti ti-credit-card"></i></div>
+          <h3>Fast & Reliable Payments</h3>
+          <p>Timely, accurate settlements. Partners receive payouts seamlessly with full transparency and zero delays.</p>
         </div>
         <div class="benefit-card reveal" style="--delay:0.4s">
-          <div class="benefit-icon bi-5"><i class="ti ti-chart-bar"></i></div>
-          <h3>Revenue Growth Support</h3>
-          <p>Access powerful analytics and insights to understand your customers, optimize pricing, and grow your restaurant business.</p>
+          <div class="benefit-icon bi-5"><i class="ti ti-users"></i></div>
+          <h3>Dedicated Partner Support</h3>
+          <p>A personal account manager for every restaurant. We're invested in your growth as much as you are.</p>
         </div>
         <div class="benefit-card reveal" style="--delay:0.5s">
-          <div class="benefit-icon bi-6"><i class="ti ti-device-mobile"></i></div>
-          <h3>Real-Time Dashboard</h3>
-          <p>Manage all your orders, track earnings, and update your menu in real-time through our easy-to-use restaurant dashboard.</p>
+          <div class="benefit-icon bi-6"><i class="ti ti-layout-grid"></i></div>
+          <h3>Easy Menu Management</h3>
+          <p>Update your menu, prices, and availability in real-time from anywhere — no tech expertise needed.</p>
         </div>
       </div>
     </div>
@@ -130,28 +125,28 @@
           <div class="step-num">01</div>
           <div class="step-icon"><i class="ti ti-forms"></i></div>
           <h3>Submit Details</h3>
-          <p>Fill out the registration form with your restaurant information and upload the required documents.</p>
+          <p>Fill out the registration form with your restaurant info and required documents.</p>
         </div>
         <div class="step-arrow reveal" style="--delay:0.1s"><i class="ti ti-arrow-right"></i></div>
         <div class="step reveal" style="--delay:0.15s">
           <div class="step-num">02</div>
           <div class="step-icon"><i class="ti ti-shield-check"></i></div>
           <h3>Verification</h3>
-          <p>Our team verifies your documents and restaurant details within 24–48 hours of submission.</p>
+          <p>Our team verifies your documents and restaurant details within 24–48 hours.</p>
         </div>
         <div class="step-arrow reveal" style="--delay:0.25s"><i class="ti ti-arrow-right"></i></div>
         <div class="step reveal" style="--delay:0.3s">
           <div class="step-num">03</div>
           <div class="step-icon"><i class="ti ti-building-store"></i></div>
           <h3>Onboarding & Listing</h3>
-          <p>We create your restaurant profile, upload your menu, and list you on the Treats24 platform.</p>
+          <p>We create your profile, upload your menu, and list you on Treats24.</p>
         </div>
         <div class="step-arrow reveal" style="--delay:0.4s"><i class="ti ti-arrow-right"></i></div>
         <div class="step reveal" style="--delay:0.45s">
           <div class="step-num">04</div>
           <div class="step-icon"><i class="ti ti-shopping-bag"></i></div>
           <h3>Start Receiving Orders</h3>
-          <p>You're live! Start receiving orders from thousands of hungry customers in your area immediately.</p>
+          <p>You're live! Start receiving orders from thousands of hungry customers immediately.</p>
         </div>
       </div>
     </div>
@@ -165,7 +160,6 @@
         <h2>Register Your <span>Restaurant</span></h2>
         <p>Fill in the details below and our team will contact you within 24 hours</p>
       </div>
-
       <div class="partner-form-card reveal">
         <div id="registrationForm">
           <div class="form-section-title"><i class="ti ti-building-store"></i> Restaurant Information</div>
@@ -261,11 +255,11 @@
             </div>
             <div class="form-group">
               <label><i class="ti ti-upload"></i> Menu *</label>
-              <div class="file-upload-wrap" onclick="document.getElementById('menu').click()">
+              <div class="file-upload-wrap" onclick="document.getElementById('menu_file').click()">
                 <i class="ti ti-cloud-upload"></i>
                 <span>Click to upload or drag & drop</span>
                 <small>PDF, JPG, PNG (max 5MB)</small>
-                <input type="file" id="menu" accept=".pdf,.jpg,.jpeg,.png" onchange="handleFileUpload(this, 'menu-label')"/>
+                <input type="file" id="menu_file" accept=".pdf,.jpg,.jpeg,.png" onchange="handleFileUpload(this, 'menu-label')"/>
               </div>
               <span class="file-label" id="menu-label"></span>
             </div>
@@ -282,16 +276,15 @@
           </div>
 
           <button class="btn-submit" onclick="submitPartnerForm()">
-            <i class="ti ti-send"></i>
-            Register My Restaurant Now
+            <i class="ti ti-send"></i> Register My Restaurant Now
           </button>
-          <p class="form-disclaimer"><i class="ti ti-shield-check"></i> Your information is secure and will never be shared with third parties.</p>
+          <p class="form-disclaimer"><i class="ti ti-shield-check"></i> Your information is secure and will never be shared.</p>
         </div>
 
         <div id="partnerSuccess" class="partner-success hidden">
           <div class="success-icon"><i class="ti ti-circle-check"></i></div>
           <h3>You're on the list! 🎉</h3>
-          <p>Thank you for registering with Treats24. Our team will reach out to you within <strong>24 hours</strong> to complete the onboarding process. Prepare to grow your restaurant!</p>
+          <p>Thank you for registering with Treats24. Our team will reach out within <strong>24 hours</strong> to complete onboarding. Prepare to grow!</p>
           <a href="index.html" class="btn-back"><i class="ti ti-arrow-left"></i> Back to Home</a>
         </div>
       </div>
@@ -307,31 +300,27 @@
           <span class="logo-text">Treats<em>24</em></span>
         </a>
         <p class="footer-tagline">Dil Se Delivery 💛</p>
-        <p>Treats24 is a food delivery platform built with a vision to connect customers with their favourite local restaurants.</p>
+        <p>Kolkata's favourite food delivery platform connecting you to the best local restaurants.</p>
         <div class="social-row">
           <a href="#" class="social-btn"><i class="ti ti-brand-instagram"></i></a>
           <a href="#" class="social-btn"><i class="ti ti-brand-facebook"></i></a>
           <a href="#" class="social-btn"><i class="ti ti-brand-x"></i></a>
-          <a href="https://wa.me/919876543210" class="social-btn whatsapp"><i class="ti ti-brand-whatsapp"></i></a>
-        </div>
-        <div class="footer-email">
-          <i class="ti ti-mail"></i>
-          <a href="mailto:support@treats24.com">support@treats24.com</a>
+          <a href="https://wa.me/919876543210" class="social-btn wa"><i class="ti ti-brand-whatsapp"></i></a>
         </div>
       </div>
       <div class="footer-col"><h5>Company</h5><ul>
-        <li><a href="#"><i class="ti ti-chevron-right"></i> About Us</a></li>
-        <li><a href="#"><i class="ti ti-chevron-right"></i> Careers</a></li>
-        <li><a href="#"><i class="ti ti-chevron-right"></i> Blog</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Blog</a></li>
       </ul></div>
       <div class="footer-col"><h5>Help</h5><ul>
-        <li><a href="index.html#contact"><i class="ti ti-chevron-right"></i> Contact Us</a></li>
-        <li><a href="index.html#faq"><i class="ti ti-chevron-right"></i> FAQ</a></li>
-        <li><a href="#"><i class="ti ti-chevron-right"></i> Refund Policy</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="#">Refund Policy</a></li>
       </ul></div>
       <div class="footer-col"><h5>Legal</h5><ul>
-        <li><a href="#"><i class="ti ti-chevron-right"></i> Privacy Policy</a></li>
-        <li><a href="#"><i class="ti ti-chevron-right"></i> Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
       </ul></div>
     </div>
     <div class="footer-bottom">
@@ -344,6 +333,10 @@
       </div>
     </div>
   </footer>
+
+  <a href="https://wa.me/919876543210?text=Hi%20Treats24!" target="_blank" class="wa-float" aria-label="WhatsApp">
+    <i class="ti ti-brand-whatsapp"></i>
+  </a>
 
   <script src="script.js"></script>
 </body>
