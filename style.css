@@ -138,8 +138,21 @@ margin-left: auto;            /* ADD THIS */
 .hero-chips span:hover{background:var(--accent);border-color:var(--accent);color:#fff;}
 
 /* App download hero */
-.hero-app-download{display:flex;align-items:center;gap:12px;flex-wrap:wrap;
-justify-content: center; }
+.hero-app-download {
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: center;
+  gap: 14px;
+}
+.hero-app-download .had-label {
+  text-align: center;
+}
+.hero-app-download .app-store-btn-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .had-label{font-size:0.78rem;color:rgba(255,255,255,0.5);font-family:var(--font-primary);font-weight:600;text-transform:uppercase;letter-spacing:1px;}
 
 /* Stats bar */
